@@ -5,13 +5,14 @@ import Signout from './components/Signout';
 import { auth } from "./firebase";
 
 function App() {
-   const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);
+
    
   return (
     <div>
       {user ? <Signout/> : <Sign/>  }
     </div>
   );
-}
+};
 
 export default App;
