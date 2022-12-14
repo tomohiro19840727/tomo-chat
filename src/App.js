@@ -1,6 +1,8 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import './App.css';
-import Sign from './components/Sign';
+import Line from "./components/Line";
+import Sign from "./components/Sign";
+
 import Signout from './components/Signout';
 import { auth } from "./firebase";
 
@@ -10,7 +12,7 @@ function App() {
    
   return (
     <div>
-      {user ? <Signout/> : <Sign/>  }
+      {user ? <Signout /> : <Line />  }
     </div>
   );
 };
